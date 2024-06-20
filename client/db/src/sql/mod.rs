@@ -302,7 +302,7 @@ where
 								}
 								None => {
 									return Err(Error::Protocol(format!(
-										"Missing ethereum block for hash mismatch {expect_eth_block_hash:?}"
+										"Missing Ethereum block for hash mismatch {expect_eth_block_hash:?}"
 									)))
 								}
 							}
