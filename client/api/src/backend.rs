@@ -33,13 +33,13 @@ pub struct TransactionMetadata<Block: BlockT> {
 /// The frontier backend interface.
 #[async_trait::async_trait]
 pub trait Backend<Block: BlockT>: Send + Sync {
-	/// Get the substrate hash with the given ethereum block hash.
+	/// Get the substrate hash with the given Ethereum block hash.
 	async fn block_hash(
 		&self,
 		ethereum_block_hash: &H256,
 	) -> Result<Option<Vec<Block::Hash>>, String>;
 
-	/// Get the transaction metadata with the given ethereum block hash.
+	/// Get the transaction metadata with the given Ethereum block hash.
 	async fn transaction_metadata(
 		&self,
 		ethereum_transaction_hash: &H256,
