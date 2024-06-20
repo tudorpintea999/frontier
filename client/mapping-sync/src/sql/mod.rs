@@ -592,7 +592,7 @@ mod test {
 		// Create 10 blocks, 2 receipts each, 1 log per receipt
 		let mut logs: Vec<(i32, fc_db::sql::Log)> = vec![];
 		for block_number in 1..11 {
-			// New block including pallet ethereum block digest
+			// New block including pallet Ethereum block digest
 			let mut builder = client.new_block(Default::default()).unwrap();
 			builder
 				.push_deposit_log_digest_item(ethereum_digest())
