@@ -314,7 +314,7 @@ impl<Block: BlockT> MappingDb<Block> {
 					data.push(commitment.block_hash);
 					log::warn!(
 						target: "fc-db",
-						"Possible equivocation at ethereum block hash {} {:?}",
+						"Possible equivocation at Ethereum block hash {} {:?}",
 						&commitment.ethereum_block_hash,
 						&data
 					);
