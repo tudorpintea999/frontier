@@ -69,7 +69,7 @@ pub struct Transaction {
 	/// The parity (0 for even, 1 for odd) of the y-value of the secp256k1 signature.
 	#[serde(skip_serializing_if = "Option::is_none")]
 	pub y_parity: Option<U256>,
-	/// The standardised V field of the signature.
+	/// The standardized V field of the signature.
 	///
 	/// For backwards compatibility, `v` is optionally provided as an alternative to `yParity`.
 	/// This field is DEPRECATED and all use of it should migrate to `yParity`.
