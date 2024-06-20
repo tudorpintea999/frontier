@@ -433,7 +433,7 @@ mod tests {
 		let b2_hash = b2.header.hash();
 		executor::block_on(client.import(BlockOrigin::Own, b2)).unwrap();
 
-		// Map B2 to same ethereum hash
+		// Map B2 to same Ethereum hash
 		let commitment = fc_db::kv::MappingCommitment::<OpaqueBlock> {
 			block_hash: b2_hash,
 			ethereum_block_hash,
