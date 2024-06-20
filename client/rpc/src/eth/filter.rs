@@ -112,7 +112,7 @@ where
 					.ready()
 					.map(|in_pool_tx| in_pool_tx.data().clone())
 					.collect();
-				// Use the runtime to match the (here) opaque extrinsics against ethereum transactions.
+				// Use the runtime to match the (here) opaque extrinsics against Ethereum transactions.
 				let api = self.client.runtime_api();
 				api.extrinsic_filter(best_hash, txs_ready)
 					.map_err(|err| {
