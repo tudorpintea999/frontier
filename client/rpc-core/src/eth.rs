@@ -48,7 +48,7 @@ pub trait EthApi {
 	#[method(name = "eth_accounts")]
 	fn accounts(&self) -> RpcResult<Vec<H160>>;
 
-	/// Returns highest block number.
+	/// Returns the highest block number.
 	#[method(name = "eth_blockNumber")]
 	fn block_number(&self) -> RpcResult<U256>;
 
