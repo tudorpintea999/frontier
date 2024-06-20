@@ -230,7 +230,7 @@ pub mod pallet {
 		fn on_initialize(_: BlockNumberFor<T>) -> Weight {
 			let mut weight = T::SystemWeightInfo::kill_storage(1);
 
-			// If the digest contain an existing ethereum block(encoded as PreLog), If contains,
+			// If the digest contain an existing Ethereum block(encoded as PreLog), If contains,
 			// execute the imported block firstly and disable transact dispatch function.
 			if let Ok(log) = fp_consensus::find_pre_log(&frame_system::Pallet::<T>::digest()) {
 				let PreLog::Block(block) = log;
