@@ -6,9 +6,9 @@ independently.
 ## EVM execution only
 
 In many situations, a Substrate blockchain may only want to include
-EVM execution capatibilities. In this way, it functions similarly to
+EVM execution capabilities. In this way, it functions similarly to
 `pallet-contracts`, integrates with Substrate better and is less
-intrusive. The module, and its EVM execution capatibilties, can be
+intrusive. The module, and its EVM execution capabilities, can be
 added or removed at any moment via forkless upgrades. With EVM
 execution only, Substrate uses its account model fully and signs
 transactions on behalf of EVM accounts.
