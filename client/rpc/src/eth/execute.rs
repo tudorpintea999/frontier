@@ -768,7 +768,7 @@ where
 			return Err(internal_err("failed to retrieve Runtime Api version"));
 		};
 
-		// Verify that the transaction succeed with highest capacity
+		// Verify that the transaction succeeds with highest capacity
 		let cap = highest;
 		let estimate_mode = !cfg!(feature = "rpc-binary-search-estimate");
 		let ExecutableResult {
