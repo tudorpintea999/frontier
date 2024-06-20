@@ -47,7 +47,7 @@ pub(crate) enum UpgradeError {
 	UnknownDatabaseVersion,
 	/// Database version no longer supported.
 	UnsupportedVersion(u32),
-	/// Database version comes from future version of the client.
+	/// Database version comes from a future version of the client.
 	FutureDatabaseVersion(u32),
 	/// Common io error.
 	Io(io::Error),
@@ -81,7 +81,7 @@ impl fmt::Display for UpgradeError {
 			UpgradeError::FutureDatabaseVersion(version) => {
 				write!(
 					f,
-					"Database version comes from future version of the client: {}",
+					"Database version comes from a future version of the client: {}",
 					version
 				)
 			}
@@ -124,7 +124,7 @@ pub(crate) fn upgrade_db<Block: BlockT, C: HeaderBackend<Block>>(
 	Ok(())
 }
 
-/// Reads current database version from the file at given path.
+/// Reads the current database version from the file at given path.
 /// If the file does not exist it gets created with version 1.
 pub(crate) fn current_version(path: &Path) -> UpgradeResult<u32> {
 	match fs::File::open(version_file_path(path)) {
