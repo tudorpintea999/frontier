@@ -121,7 +121,7 @@ where
 			.map(|(_, extrinsic)| extrinsic.clone())
 			.collect();
 
-		// Use the runtime to match the (here) opaque extrinsics against ethereum transactions.
+		// Use the runtime to match the (here) opaque extrinsics against Ethereum transactions.
 		let best_block = self.client.info().best_hash;
 		let api = self.client.runtime_api();
 		let ready = api
