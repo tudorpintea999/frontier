@@ -111,12 +111,12 @@ where
 				_ => return Err(self.key_value_error(key, value)),
 			},
 			Operation::Read => match (column, key) {
-				// Given ethereum block hash, get substrate block hash.
+				// Given Ethereum block hash, get substrate block hash.
 				(Column::Block, MappingKey::EthBlockOrTransactionHash(ethereum_block_hash)) => {
 					let value = self.backend.mapping().block_hash(ethereum_block_hash)?;
 					println!("{:?}", value);
 				}
-				// Given ethereum transaction hash, get transaction metadata.
+				// Given Ethereum transaction hash, get transaction metadata.
 				(
 					Column::Transaction,
 					MappingKey::EthBlockOrTransactionHash(ethereum_transaction_hash),
