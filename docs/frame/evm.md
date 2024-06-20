@@ -11,7 +11,7 @@ underlying EVM engine.
 
 ## Execution lifecycle
 
-There are a separate set of accounts managed by the EVM
+There is a separate set of accounts managed by the EVM
 module. Substrate based accounts can call the EVM Module to deposit or
 withdraw balance from the Substrate base-currency into a different
 balance managed and used by the EVM module. Once a user has populated
