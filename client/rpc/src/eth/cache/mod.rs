@@ -71,7 +71,7 @@ enum EthBlockDataCacheMessage<B: BlockT> {
 
 /// Manage LRU caches for block data and their transaction statuses.
 /// These are large and take a lot of time to fetch from the database.
-/// Storing them in an LRU cache will allow to reduce database accesses
+/// Storing them in an LRU cache will allow to reduce database access
 /// when many subsequent requests are related to the same blocks.
 pub struct EthBlockDataCacheTask<B: BlockT>(mpsc::Sender<EthBlockDataCacheMessage<B>>);
 
