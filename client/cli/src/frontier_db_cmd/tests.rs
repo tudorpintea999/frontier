@@ -561,7 +561,7 @@ fn commitment_create() {
 	let backend = open_frontier_backend::<OpaqueBlock, _>(client.clone(), tmp.into_path())
 		.expect("a temporary db was created");
 
-	// Run the command using some ethereum block hash as key.
+	// Run the command using some Ethereum block hash as key.
 	let ethereum_block_hash = H256::default();
 	assert!(cmd(
 		format!("{:?}", ethereum_block_hash),
@@ -625,7 +625,7 @@ fn commitment_update() {
 
 	let key = storage_prefix_build(PALLET_ETHEREUM, ETHEREUM_CURRENT_TRANSACTION_STATUS);
 
-	// First we create block and insert data in the offchain db.
+	// First we create a block and insert data in the offchain db.
 
 	// Build a block A1 and fill the pallet-ethereum status.
 	let mut builder = client
@@ -691,7 +691,7 @@ fn commitment_update() {
 	// Set the substrate block hash as the value for the command.
 	let test_value_path = test_json_file(&tmp, &TestValue::Commitment(block_a2_hash));
 
-	// Run the command using some ethereum block hash as key.
+	// Run the command using some Ethereum block hash as key.
 	let ethereum_block_hash = H256::default();
 	assert!(cmd(
 		format!("{:?}", ethereum_block_hash),
